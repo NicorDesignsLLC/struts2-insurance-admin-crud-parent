@@ -9,7 +9,7 @@
     <artifactId>struts2-crud-app-2</artifactId>
     <packaging>war</packaging>
     <name>struts2-crud-app-2</name>
-
+ 
     <properties>
         <struts2.version>[2.5.17,)</struts2.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

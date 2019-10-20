@@ -8,7 +8,7 @@
   </parent>
     <artifactId>struts2-crud-app-3</artifactId>
     <packaging>war</packaging>
-    <name>struts2-crud-app-3</name>
+    <name>struts2-crud-app-3</name> 
 
     <properties>
         <struts2.version>[2.5.17,)</struts2.version>
