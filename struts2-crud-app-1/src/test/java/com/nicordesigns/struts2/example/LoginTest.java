@@ -36,7 +36,7 @@ public class LoginTest extends ConfigTest {
 
     public void testLoginSubmit() throws Exception {
         Login login = container.inject(Login.class);
-        login.setUsername("username");
+        login.setUsername("Arty");
         login.setPassword("password");
         String result = login.execute();
         assertSuccess(result);
