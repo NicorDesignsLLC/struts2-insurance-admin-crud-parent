@@ -29,6 +29,10 @@ public class Agent implements Serializable, Cloneable {
 		this.postalCodeZip = agentpostalcode;
 		this.email = agentEmail;
 		this.company = company;
+		this.isActive = true;
+		this.expenseEnabled = false;
+		
+		
 	}
 	
 	private static final long serialVersionUID = 1L;
@@ -48,6 +52,8 @@ public class Agent implements Serializable, Cloneable {
 	private String phoneNumber;
 
 	private boolean isActive;
+	private boolean expenseEnabled;
+	
 
 	
 	public Integer getId() {
@@ -198,6 +204,16 @@ public class Agent implements Serializable, Cloneable {
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
+	}
+
+
+	public boolean isExpenseEnabled() {
+		return expenseEnabled;
+	}
+
+
+	public void setExpenseEnabled(boolean expenseEnabled) {
+		expenseEnabled = expenseEnabled;
 	}
 
 }
