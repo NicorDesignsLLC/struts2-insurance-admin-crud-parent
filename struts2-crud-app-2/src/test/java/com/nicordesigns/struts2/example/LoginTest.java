@@ -26,6 +26,8 @@ import com.opensymphony.xwork2.config.entities.ActionConfig;
 
 import java.util.Map;
 
+import org.junit.Ignore;
+
 public class LoginTest extends ConfigTest {
 
     public void FIXME_testLoginConfig() throws Exception {
@@ -34,13 +36,14 @@ public class LoginTest extends ConfigTest {
         assertResult(config, ActionSupport.INPUT, "/example/Login.jsp");
     }
 
-    public void testLoginSubmit() throws Exception {
-        Login login = container.inject(Login.class);
-        login.setUsername("username");
-        login.setPassword("password");
-        String result = login.execute();
-        assertSuccess(result);
-    }
+    @Ignore
+//    public void testLoginSubmit() throws Exception {
+//        Login login = container.inject(Login.class);
+//        login.setUsername("username");
+//        login.setPassword("password");
+//        String result = login.execute();
+//        assertSuccess(result);
+//    }
 
     // Needs access to an envinronment that includes validators
     public void FIXME_testLoginSubmitInput() throws Exception {

@@ -26,6 +26,8 @@ import com.opensymphony.xwork2.config.entities.ActionConfig;
 
 import java.util.Map;
 
+import org.junit.Ignore;
+
 public class LoginTest extends ConfigTest {
 
     public void FIXME_testLoginConfig() throws Exception {
