@@ -1,10 +1,10 @@
-ALTER TABLE `udemy_insurance_app`.`admin_user` DROP PRIMARY KEY;
+ALTER TABLE INSURANCE_ADMIN.`admin_user` DROP PRIMARY KEY;
 
-DROP INDEX `PK_admin_user` ON `udemy_insurance_app`.`admin_user`;
+DROP INDEX `PK_admin_user` ON INSURANCE_ADMIN.`admin_user`;
 
-DROP TABLE `udemy_insurance_app`.`admin_user`;
+DROP TABLE INSURANCE_ADMIN.`admin_user`;
 
-CREATE TABLE `udemy_insurance_app`.`admin_user` (
+CREATE TABLE INSURANCE_ADMIN.`admin_user` (
 	`id` INT NOT NULL,
 	`first_name` VARCHAR(45),
 	`last_name` VARCHAR(45),
@@ -13,6 +13,6 @@ CREATE TABLE `udemy_insurance_app`.`admin_user` (
 	 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
-CREATE UNIQUE INDEX `PK_admin_user` ON `udemy_insurance_app`.`admin_user` (`ID` ASC);
+CREATE UNIQUE INDEX `PK_admin_user` ON INSURANCE_ADMIN.`admin_user` (`ID` ASC);
 
 
