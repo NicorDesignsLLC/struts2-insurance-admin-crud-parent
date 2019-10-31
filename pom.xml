@@ -12,5 +12,7 @@
     <module>struts2-crud-app-2</module>
     <module>struts2-crud-app-3</module>
     <module>struts2-crud-app-4</module>
+    <module>struts2-crud-app-5</module>
+    <module>struts2-crud-app-6</module>
   </modules>
 </project>
