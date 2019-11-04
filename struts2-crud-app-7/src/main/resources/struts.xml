@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.mapper.action.prefix.enabled" value="true" />
+    
+    
+
+    <include file="insurance.xml"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+		<!-- Do not enable index/HelloWorld Action by default so that we can call the Users Test Servlet -->
+        <!-- >default-action-ref name="index"/ -->
+        
+        <interceptors>
+            <interceptor-stack name="appDefault">
+                <interceptor-ref name="paramsPrepareParamsStack">
+                    <param name="exception.logEnabled">true</param>
+                    <param name="exception.logLevel">ERROR</param>
+                    <param name="params.excludeParams">dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,parameters\...*,submit</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="appDefault" />
+        <action name="index">
+            <result type="redirectAction">
+                <param name="actionName">HelloWorld</param>
+                <param name="namespace">/insurance</param>
+            </result>
+        </action>
+
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
